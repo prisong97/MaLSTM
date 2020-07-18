@@ -1,7 +1,4 @@
 import numpy as np
-import re
-import string
-from nltk.tokenize import word_tokenize 
 
 
 class batch_generator:
@@ -65,4 +62,3 @@ class batch_generator:
             ]
             self.start += self.batch_size
         return indices
-
