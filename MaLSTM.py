@@ -10,7 +10,7 @@ class MaLSTM:
     in the paper 'Siamese Recurrent Architectures for Learning Sentence Similarity' by Jonas 
     Mueller and Aditya Thyagarajan.
     
-    However, we train an embedding layer from scratch in the training routine, instead of 
+    However, we train an embedding layer from scratch in the training routine instead of 
     using word2vec. Thus, the embedding layer's dimensions are determined by the vocabulary
     of the dataset used for training. 
     """
@@ -191,7 +191,6 @@ class MaLSTM:
                     }
 
                     val_loss_ = sess.run(self.total_loss, feed_dict=batch_dict)
-
                     
                     print("\tval loss: %.4f" % val_loss_)
                     
