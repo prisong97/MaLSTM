@@ -171,7 +171,7 @@ class MaLSTM:
                     
                     print(iteration, end=" ")
                     
-                    val_indices = batch_generator_.holdout_set_indices
+                    val_indices = batch_generator_.retrieve_holdout_indices()
                                    
                     X_sentence_1_mini_batch = X_sentence_1.iloc[val_indices]
                     X_sentence_2_mini_batch = X_sentence_2.iloc[val_indices]
