@@ -1,7 +1,7 @@
 # MaLSTM
 
 This project aims to largely replicate the architecture of the model outlined in "Siamese Recurrent Architectures for Learning Sentence Similarity" by Jonas 
-Mueller and Aditya Thyagarajan. However, in place of using pre-trained word embeddings, we train an embedding layer for the vocabulary as part of the training routine.
+Mueller and Aditya Thyagarajan. However, instead of using pre-trained word embeddings, we train an embedding layer for the vocabulary as part of the training routine.
 
 The arguments of the model can be modified by editing "MaLSTM.conf". Specifically, the supported arguments are:
 
