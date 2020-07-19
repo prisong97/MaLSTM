@@ -84,7 +84,7 @@ class MaLSTM:
         return total_loss
     
     
-    def train(self, X_sentence_1, X_sentence_2, X_sentence_1_length, X_sentence_2_length, y_data, batch_size, learning_rate,\
+    def train(self, X_sentence_1, X_sentence_2, X_sentence_1_length, X_sentence_2_length, y_data, holdout_ratio, batch_size, learning_rate,\
               no_of_iterations, seed, root_logdir):
         
         """
@@ -97,7 +97,9 @@ class MaLSTM:
         :param X_sentence_2_length: pd.Series[int]
             Series with shape=[batch_size,] containing the length of each sentence in the 2nd set of sentences.
         :param y_data: pd.Series[int]
-            Series with shape=[batch_size,] containing values \in {0,1}, indicating whether each sentence pair is semantically similar.            
+            Series with shape=[batch_size,] containing values \in {0,1}, indicating whether each sentence pair is semantically similar. 
+        :param holdout_ratio: float
+            Float specifying the proportion of the dataset to be used for model validation.           
         :param batch_size: int
             Integer specifying the minibatch size to use during training.
         :learning_rate: float
