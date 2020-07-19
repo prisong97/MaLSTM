@@ -39,11 +39,11 @@ class batch_generator:
             self.training_set_indices = self.dataset_indices
             self.holdout_set_indices = None
         
-        if batch_size == None:
+        if batch_size is not None:
+            self.batch_size = batch_size
+        else:
             self.batch_size = self.training_set_size
             print("No minibatch size specified. Using batch learning.")
-        else:
-            self.batch_size = batch_size
                    
         self.no_of_minibatches = self.training_set_size//self.batch_size + 1*(self.training_set_size%self.batch_size != 0)
         print(f"Total number of minibatches: {self.no_of_minibatches}.")
@@ -67,6 +67,5 @@ class batch_generator:
         Retrieve the holdout indices for model validation.
         """
         if self.holdout_set_indices in [None, 0]:
-            raise ValueError("No holdout set generated. Ensure that the specified holdout ratio \n
-            > 0.")
+            raise ValueError("No holdout set generated. Ensure that the specified holdout ratio > 0.")
         return self.holdout_set_indices
