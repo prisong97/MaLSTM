@@ -1,4 +1,4 @@
-# from MaLSTM import MaLSTM
+from MaLSTM import MaLSTM
 from config import OUTPUT_UNITS, MAXLEN, NO_OF_UNIQUE_WORDS, EMBED_DIM, HOLDOUT_RATIO, BATCH_SIZE, LEARNING_RATE, NO_OF_ITERATIONS, SEED, ROOT_LOGDIR
 from process_data import process_df
 
