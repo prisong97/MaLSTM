@@ -1,5 +1,5 @@
 environs==7.4.0
 pandas==1.0.3
-tensorflow==1.15.2
+tensorflow==2.5.0
 numpy==1.18.4
 nltk==3.4.5
